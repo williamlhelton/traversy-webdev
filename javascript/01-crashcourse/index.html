@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>JavaScript Crash Course</title>
+</head>
+<body id="body" onload="">
+    <div class="header">
+        <h1 id="heading">Learning JavaScript</h1> 
+        <p>with Brad Traversy</p>
+    </div>
+
+    <div class="container">
+        <button onclick="doClick()">Alert Box</button>
+        <button onclick="this.innerHTML = 'You Clicked!'">Change Text</button>
+        <button onclick="changeText(this)">Change Text Again</button>
+        <button onclick="changeHeading()">Change Heading Text</button>
+        <button onclick="showDate()">Show Date</button>
+        <h1 id="time"></h1>
+        <button onmouseover="showDate2()" onmouseout="clearDate2()">Mouse Over for Date</button>
+        <h1 id="time2"></h1>
+    </div>
+
+    <div id="bottomform">
+        <form method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="firstName" id="firstName" />
+            </div><br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="lastName" />
+            </div><br>
+            <div>
+                <label>Background</label>
+                <select name="background" id=background onchange="changeBackground(this)">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+            </div><br />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>
