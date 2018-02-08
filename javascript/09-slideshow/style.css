@@ -1,0 +1,57 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+#slideshow-1{
+    position: relative;
+    width: 100%;
+    max-width: 400px;    
+}
+
+#slideshow-1:hover .arrow-buttons{
+    opacity: 1;
+}
+
+#slideshow-buttons{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, 0);
+}
+
+#slideshow-buttons ul{
+    list-style: none;
+}
+
+#slideshow-buttons li{
+    display: inline-block;
+    margin-right: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border: 1px solid #00f;
+    cursor: pointer;
+}
+
+#slideshow-1 .arrow-buttons{
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#slideshow-1 .arrow-left{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#slideshow-1 .arrow-right{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Slideshows</title>
+</head>
+<body>
+    <!-- Slider 1 -->
+    <div id="slideshow-1">
+        <img class="slideshow-image" name="slides0">        
+        <ul id="slideshow-buttons">
+            <li onclick="hardTrigger(0)"></li>
+            <li onclick="hardTrigger(1)"></li>
+            <li onclick="hardTrigger(2)"></li>
+            <li onclick="hardTrigger(3)"></li>
+        </ul>        
+        <div class="arrow-buttons">
+            <img src="img/arrow-left.png" class="arrow-left" onclick="leftArrow()">
+            <img src="img/arrow-right.png" class="arrow-right" onclick="rightArrow()">
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
