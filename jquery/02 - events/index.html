@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+    <title>jQuery Crash Course - Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Crash Course</h1>
+    </header>
+    <div id='container'>
+        <h1 id='coords'></h1>
+        <h3>Mouse Events</h3>
+        <button id='btn1'>Button 1</button>
+        <button id='btn2'>Button 2</button>
+        <p class='para1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minus itaque nisi eveniet? Consequuntur ad, aspernatur
+            magni ipsum veritatis sapiente?</p>
+
+        <hr>
+
+        <form id="form">
+            <label>Name</label>
+            <br>
+            <input type="text" id="name" name="name">
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="text" id="email" name="email">
+            <br>
+            <label>Gender</label>
+            <br>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // $('#btn1').click(function () {
+            //     alert('Button clicked');
+            // });
+
+            // // same thing
+            // $('#btn1').on('click', function(){
+            //     alert('Button clicked again!');
+            // });
+
+            // // hide paragraph
+            // $('#btn1').click(function(){
+            //     $('.para1').hide();
+            // });
+
+            // $('#btn2').click(function(){
+            //     $('.para1').show();
+            // });
+
+            // // double click event
+            // $('#btn1').dblclick(function(){
+            //     $('.para1').toggle();
+            // });
+
+            // hover event
+            // includes 'mouseenter' and 'mouseleave' events
+            // $('#btn1').hover(function(){
+            //     $('.para1').toggle();
+            // });
+
+            // mousemove event
+            // $('#btn1').mousemove(function(){
+            //     $('.para1').toggle();
+            // });
+
+            // mouseup and mousedown events
+            // $('#btn1').mousedown(function(){
+            //     $('.para1').toggle();
+            // });
+
+            // $('#btn2').mouseup(function(){
+            //     $('.para1').toggle();
+            // });
+
+            // pass event parameters
+            // $('#btn1').click(function(e){
+            //     console.log(e.currentTarget.id);
+            //     console.log(e.currentTarget.innerHTML);
+            //     console.log(e.currentTarget.outerHTML);
+            // });
+
+            // mousemove event
+            // $(document).mousemove(function (e) {
+            //     // console.log('Coords: Y: ' + e.clientY + ' X: ' + e.clientX);
+            //     $('#coords').html('Coords: Y: ' + e.clientY + ' X: ' + e.clientX);
+            // });
+
+            // FORM
+            // focus event
+            // $('input').focus(function(){
+            //     $(this).css('background', 'pink');
+            // });
+
+            // // blur event
+            // $('input').blur(function(){
+            //     $(this).css('background', '#f4f4f4');
+            // });
+
+            // // keyup event
+            // $('input').keyup(function(e){
+            //     console.log(e.target.value);
+            // });
+
+            $('select#gender').change(function(e){
+                console.log(e.target.value);
+            });
+
+            $('#form').submit(function(e){
+                e.preventDefault();
+                var name = $('input#name').val();
+                console.log('Submitted: ' + name);
+            });
+        });
+
+
+        // if script in heading
+        // $(document).ready(function(){
+        //      query stuff here
+        // });
+    </script>
+</body>
+
+</html>
