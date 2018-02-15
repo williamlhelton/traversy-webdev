@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .myClass {
+            color: blue;
+            background: black;
+        }
+    </style>
+    <title>jQuery Crash Course - DOM</title>
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Crash Course</h1>
+    </header>
+    <div id='container'>
+        <button id="btn1">Button 1</button>
+        <p class="para1">Lorem ipsum dolor sit.</p>
+        <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div id="myDiv"></div>
+
+        <input type="text" id="newItem">
+
+        <ul id="list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+
+        <a href="http://www.google.com">Google</a>
+
+        <ul id = "users">
+
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // CSS manipulation
+            // $('p.para1').css('color', 'red');
+            // $('p.para2').css({color:'blue', background:'#ccc'});
+
+            // // addClass just adds a class to the element
+            // $('p.para1').addClass('myClass');
+            // $('p.para1').removeClass('myClass');
+
+            // $('#btn1').click(function(){
+            //     $('p.para1').toggleClass('myClass');
+            // });
+
+            // Add text or html to div
+            // $('#myDiv').text('Hello World');
+            // $('#myDiv').html('<h3>Hello World</h3>');
+            // alert($('#myDiv').text());
+
+            // // append/prepend existing or new elements
+            // $('ul').append('<li>New List Item</li>');
+            // $('ul').prepend('<li>Prepend List Item</li>');
+            // $('.para1').appendTo('.para2');
+            // $('.para1').prependTo('.para2');
+            // $('ul').before('<h4>Hello Header</h4>');
+            // $('ul').after('<h4>Goodbye Header</h4>');
+
+            // // removes inner elements but <ul></ul> remains
+            // $('ul').empty();
+
+            // // removes inner and outer elements
+            // $('ul').detach();
+
+            // // set attribute to link tag
+            // $('a').attr('target', '_blank');
+
+            // // remove attribute
+            // $('a').removeAttr('target', '_blank');
+
+            // wrap elements in other elements
+            // example: wrap paragraph with header
+            // $('p').wrap('<h1>');
+            // $('p').wrapAll('<h1>');
+
+            // // use input box to add to list items
+            // $('#newItem').keyup(function(e){
+            //     var code = e.which;
+            //     // if key is "Enter"
+            //     if(code == 13){
+            //         e.preventDefault();
+            //         $('ul').append('<li>' + e.target.value + '</li>');
+            //         $('#newItem').val('');
+            //     }
+            // });
+
+            // // arrays
+            // var myArr = ['Brad', 'Kelly', 'Nate', 'Jose'];
+            // $.each(myArr, function(index, value){
+            //     $('#users').append('<li>' + value + '</li>');
+            // });
+
+            var newArr = $('ul#list li').toArray();
+            console.log(newArr);
+        });
+
+
+
+        // if script in heading
+        // $(document).ready(function(){
+        //      query stuff here
+        // });
+    </script>
+</body>
+
+</html>
