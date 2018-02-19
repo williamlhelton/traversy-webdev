@@ -4,5 +4,9 @@
     <div class="jumbotron text-center">
         <h1>Welcome To FlaskApp</h1>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, vel quas tenetur suscipit eveniet porro doloremque ipsam similique quibusdam, deserunt libero provident ducimus voluptatibus laborum nemo illo, ea molestiae. Vitae?</p>
+        {% if session.logged_in == NULL %}
+            <a href="/register" class="btn btn-primary btn-lg">Register</a>
+            <a href="/login" class="btn btn-success btn-lg">Log In</a>
+        {% endif %}
     </div>
 {% endblock %}
